@@ -1,16 +1,3 @@
-bcrypt-nodejs-as-promised
-==================
-This is a modified version of the original bcrypt-as-promised as I was having issues using bcrypt.
-
-Original can be found here [bcrypt-as-promised](https://github.com/iceddev/bcrypt-as-promised)
-
-A promisfied version of [bcrypt](https://github.com/ncb000gt/node.bcrypt.js)
-
-## Install via NPM
-```
-npm install bcrypt-nodejs-as-promised
-```
-
 ## Basic Usage
 
 hashing:
