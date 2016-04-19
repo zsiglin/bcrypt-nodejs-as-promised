@@ -9,8 +9,6 @@ var when = require('when');
 var getValid = nodefn.lift(bcrypt.compare);
 var hash = nodefn.lift(bcrypt.hash);
 
-var DEFAULT_ROUNDS = 10;
-
 function MismatchError(message){
   Error.call(this);
   this.message = message;
@@ -38,11 +36,8 @@ function getRounds(hash){
   return when.try(bcrypt.getRounds, hash);
 }
 
-function promisedHash(password, salt){
-  if(!salt){
-    salt = DEFAULT_ROUNDS;
-  }
-  return hash(password, salt);
+function promisedHash(password){
+  return hash(password, null, null);
 }
 
 module.exports = {
